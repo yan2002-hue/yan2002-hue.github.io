@@ -1,10 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f8f5;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #2a4d8f;
+      --border: #d0cdc7;
+      --card: #ffffff;
+    }
+
+    body {
+      background: url('photo.jpg') center center / cover no-repeat fixed;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* dark overlay so text stays readable */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    header, nav, main, footer { position: relative; z-index: 1; }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      padding: 1.6rem 0 1rem;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #fff;
+    }
+
+    /* ── Nav ── */
+    nav {
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.35);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 0.65rem 1.2rem;
+      text-decoration: none;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom-color: #fff;
+      color: #fff;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 820px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Bio card ── */
+    .bio {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .bio img {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .bio-text h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #fff;
+    }
+
+    .bio-text p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1rem;
+    }
+
+    .bio-text a {
+      color: #a8c4ff;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── Contact block ── */
+    .contact {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 0.9rem;
+    }
+
+    .contact p { margin-bottom: 0.2rem; }
+
+    /* ── Announcement ── */
+    .announcement {
+      margin-top: 1.5rem;
+      background: rgba(255,255,255,0.05);
+      border-left: 4px solid rgba(255,255,255,0.3);
+      border-radius: 3px;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.92rem;
+      color: #fff;
+      backdrop-filter: blur(10px);
+    }
+
+    .announcement a {
+      color: #a8c4ff;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 4rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .bio { flex-direction: column; }
+      .bio img { width: 100%; height: auto; }
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
+
+  <header>
+    <h1>Yan Kevin ZE</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="cv.pdf">CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="bio">
+      <!-- Replace 'photo.jpg' with your actual photo filename -->
+      <img src="photo.jpg" alt="Photo of Your Name" />
+
+      <div class="bio-text">
+        <h2>About me</h2>
+        <p>
+          I am currently a master's student at the
+          <a href="https://aims.ac.rw/">African Institute for Mathematical Sciences</a>.
+          Previously I held a master's student at the <a href="https://uy1.uninet.cm/en/">University of Yaounde I</a> .
+          You can find more information in my
+          <a href="cv.pdf">curriculum vitae</a>.
+        </p>
+
+        <div class="contact">
+          <p><strong>Postal address:</strong></p>
+          <p>Room 000, Department of ...</p>
+          <p>African Institute for Mathematical Sciences (AIMS Rwanda)</p>
+          <p>Kigali, Rwanda</p>
+          <br/>
+          <p><strong>Email:</strong> yan.kevin@aims.ac.rw</p>
+          <p><strong>Phone:</strong> +250 781 934 981</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remove or update this block as needed -->
+    <div class="announcement">
+      📢 <strong>Announcement:</strong> I am co-organizing
+      <a href="#">Conference Name 2025</a> (Month 2025, City).
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Full Name
+  </footer>
+
 </body>
 </html>
