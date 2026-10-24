@@ -74,6 +74,42 @@
     .content a {
       color: #1a5276;
     }
+    .research-block {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .research-text {
+        flex: 1.5;
+        min-width: 0;
+        line-height: 1.7;
+    }
+
+    .research-image {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .research-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+    }
+
+    /* Adaptation aux téléphones */
+    @media (max-width: 768px) {
+        .research-block {
+            flex-direction: column;
+        }
+
+        .research-image {
+            width: 100%;
+            max-width: 450px;
+        }
+    }
   </style>
 </head>
 <body>
@@ -95,87 +131,158 @@
     </div>
 
     <div class="content">
-      <h1>Research</h1>
+      <h1 style="font-family: Arial, sans-serif;">Research Interests</h1>
       <p>
-        I am interested in various problems in <strong>algebraic and geometric topology</strong>,
-        particularly at the interface between <strong>cohomology theory</strong>,
-        <strong>low-dimensional topology</strong>, and <strong>mathematical physics</strong>.
-        Below I describe the directions I have been pursuing so far, and where my current
-        interests are heading.
-      </p>
-      <p class="updated">[last updated in September 2026]</p>
+        My mathematical interests lie primarily in algebraic and geometric topology, with a particular focus on knot theory and low-dimensional topology. I am especially interested in the topology of three- and four-dimensional manifolds, the algebraic invariants of knots and manifolds, and the interplay between topological and geometric structures.
 
-      <h2>Cohomology of Homogeneous Spaces</h2>
-      <p>
-        <strong>Cohomology</strong> is one of the main tools algebraic topologists use to
-        distinguish spaces that look different but share the same basic shape invariants.
-        A particularly rich family of examples comes from <strong>homogeneous spaces</strong>
-        such as <strong>Stiefel manifolds</strong> and <strong>complex Grassmannians</strong>,
-        which parametrize collections of orthonormal frames or subspaces in a vector space
-        and appear throughout geometry, representation theory, and physics.
-      </p>
-      <p>
-        In <a href="Memoire_Yann.pdf">my Master's thesis</a> (Université of Yaoundé I, supervised by
-        <a href="hilairegeorge@yahoo.fr">Dr. Hilaire George Mbiakop</a>), I studied the cohomology of these spaces using the
-        <strong>Gysin exact sequence</strong>, together with <strong>Euler classes</strong>
-        and <strong>Chern classes</strong>, which encode how a vector bundle twists over its
-        base space. This work sits at the intersection of algebraic topology and differential
-        geometry, and it shaped my interest in how algebraic invariants can be used to
-        compute and organize topological information.
+I am also interested in differential geometry and mathematical physics, particularly in topological quantum field theory, the connections between knot invariants and quantum field theory, and the geometry of Calabi–Yau manifolds in string theory.
+
+My research experience includes the study of the cohomology of homogeneous spaces and Stallings' fibration theorem for knot exteriors. These projects have shaped my interest in understanding how algebraic and geometric methods illuminate the structure of topological spaces. I aim to explore these connections further while remaining open to new research directions at the intersection of topology, geometry, and mathematical physics.
       </p>
 
-      <h2>Low-Dimensional Topology and Knot Theory</h2>
+        
+<div style="display: flex; align-items: flex-start; gap: 35px; margin: 30px 0;">
+
+    <!-- Colonne de gauche : image -->
+    <div style="flex: 0 0 40%; min-width: 0;">
+
+        <figure style="margin: 0; text-align: center;">
+
+            <img
+                src="Cohomology Groups Commutative Diagram.png"
+                alt="Gysin sequence relating the cohomology groups of Stiefel manifolds"
+                style="width: 100%; height: auto; display: block;"
+            >
+
+            <figcaption style="font-size: 14px; color: #666; margin-top: 10px; font-style: italic;">
+                Gysin sequence associated with Stiefel manifolds.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+    <!-- Colonne de droite : texte -->
+    <div style="flex: 1; min-width: 0;">
+
+        <h2 style="font-family: Arial, sans-serif; margin-top: 0;">
+            Cohomology of Homogeneous Spaces
+        </h2>
+
+        <p>
+            In my <a href="Memoire_Yann.pdf">Master's thesis</a> at the
+            University of Yaoundé I, supervised by
+            <a href="mailto:hilairegeorge@yahoo.fr">
+                Dr. Hilaire George Mbiakop
+            </a>, I studied the cohomology of homogeneous spaces,
+            particularly Stiefel manifolds and complex Grassmannians.
+            These spaces arise naturally in geometry and topology and
+            provide important examples for understanding the relationships
+            between geometric structures and algebraic invariants.
+        </p>
+
+        <p>
+            In this work, I studied their cohomological properties using
+            the Gysin exact sequence and characteristic classes,
+            particularly Euler and Chern classes. These tools provide
+            a systematic way to relate the cohomology of a space to that
+            of its base and fiber in suitable geometric settings, while
+            characteristic classes encode important information about
+            vector bundles.
+        </p>
+    </div>
+
+</div>
+
+
+      <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 40px;">
+
+    <!-- Texte à gauche -->
+    <div style="flex: 1.5; min-width: 0;">
+
+        <h2 style="font-family: Arial, sans-serif; font-size: 20px; white-space: nowrap;">
+    Low-Dimensional Topology and Knot Theory
+        </h2>
+
+        <p>
+            My MSc research at the African Institute for Mathematical Sciences
+            (AIMS) Rwanda focused on
+            <a href="yan_kevin_Essay_Final_Version_2026.pdf">
+                Stallings' fibration theorem for knot exteriors
+            </a>,
+            supervised by
+            <a href="https://www.maths.gla.ac.uk/~alecuona/">
+                Professor Ana García Lecuona
+            </a>.
+
+            This theorem provides a fundamental criterion for determining
+            when the exterior of a knot in the three-sphere fibers over the
+            circle, linking the topology of knot complements to the algebraic
+            properties of their fundamental groups.
+
+            A central aspect of my work was the study of the relationship
+            between the fundamental group of a knot exterior, its commutator
+            subgroup, and the topology of infinite cyclic covers. I also
+            explored the role of Seifert surfaces and the algebraic techniques
+            used to study these structures.
+
+            This project deepened my interest in knot theory and low-dimensional
+            topology, particularly in the interplay between algebraic invariants,
+            covering spaces, and the geometric structure of three-dimensional
+            manifolds.
+        </p>
+
+    </div>
+
+
+<div style="flex: 1.2; min-width: 0; padding-top: 20px;">
+
+    <!-- Image 1 : en haut à gauche -->
+    <figure style="margin: 0 0 30px 0; width: 100%; max-width: 500px; text-align: center;">
+
+        <img
+            src="Pretzel knot.png"
+            alt="Diagram of a pretzel knot"
+            style="width: 100%; height: auto; display: block;"
+        >
+
+        <figcaption style="font-size: 14px; color: #666; margin-top: 10px; font-style: italic;">
+            Seifert surface of the pretzel knot P(2p+1, 2q+1, 2r+1).
+        </figcaption>
+
+    </figure>
+
+    <!-- Image 2 : en bas et nettement à droite -->
+    <figure style="position: relative; left: 300px; margin: 0; width: 110%; max-width: 550px; text-align: center;">
+
+        <img
+            src="Fiber bundle structure of the knot complement.png"
+            alt="Fiber bundle structure of the knot complement"
+            style="width: 100%; height: auto; display: block;"
+        >
+
+        <figcaption style="font-size: 14px; color: #666; margin-top: 10px; font-style: italic;">
+            Fiber bundle structure of the knot complement.
+        </figcaption>
+
+    </figure>
+
+</div>
+
+</div>
+
+      <h2 style="font-family: Arial, sans-serif;">Mathematical Physics: Supergravity and Geometry</h2>
       <p>
-        A central question in <strong>low-dimensional topology</strong> is understanding how
-        a knot sits inside 3-dimensional space, and what the complement of that knot &mdash;
-        its <strong>exterior</strong> &mdash; can tell us about the knot itself. A knot
-        exterior is <strong>fibered</strong> if it can be built by taking a surface and
-        gluing its boundary back to itself via a "twisting" map, layer by layer, like pages
-        of a book curling around a spine.
-      </p>
-      <p>
-        In <a href="yan_kevin_Essay_Final_Version_2026.pdf">my MSc thesis</a> at AIMS Rwanda (supervised by <a href="https://www.maths.gla.ac.uk/~alecuona/index_EN.html">Prof. Ana García
-        Lecuona</a>, University of Glasgow), I studied <strong>Stallings' Fibration
-        Theorem</strong>, which gives an algebraic criterion &mdash; in terms of the
-        <strong>knot group</strong> and the <strong>Alexander polynomial</strong> &mdash;
-        for deciding exactly when a knot exterior fibers over the circle. This theorem sits
-        at a beautiful crossroad between algebra (group theory), topology (3-manifolds),
-        and combinatorics (polynomial invariants), and it continues to be my main entry
-        point into knot theory, fibered 3-manifolds, and more broadly contact and symplectic
-        topology.
+        <strong>In progress</strong>
       </p>
 
-      <h2>Mathematical Physics: Supergravity and Geometry</h2>
-      <p>
-        <strong>Supergravity</strong> theories describe gravity together with
-        supersymmetry, and many of their solutions are built from highly structured
-        geometric spaces &mdash; <strong>Kähler manifolds</strong>,
-        <strong>Riemannian</strong> and <strong>Lorentzian</strong> geometries &mdash;
-        whose curvature and holonomy encode the physical fields.
-      </p>
-      <p>
-        As part of the <strong>MIORPA programme</strong> at the University of Oxford
-        (selected among twelve participants, working with Tabea Sieper and Chris Couzens),
-        I have been studying supergravity solutions built from <strong>toric</strong> and
-        <strong>Kähler geometry</strong>, using <strong>Mathematica</strong> for symbolic
-        computation. This work has given me a concrete appreciation for how
-        differential-geometric machinery &mdash; curvature, complex structures, moment maps
-        &mdash; gets put to work in a physical setting, and it feeds back naturally into my
-        interest in geometric and symplectic topology.
-      </p>
 
-      <h2>Topological Data Analysis and Stochastic Geometry</h2>
+
+      <h2 style="font-family: Arial, sans-serif;">Future Research Directions</h2>
       <p>
-        More recently I have become interested in <strong>topological data analysis
-        (TDA)</strong>, which uses tools from algebraic topology (persistent homology,
-        simplicial complexes) to extract robust shape information from noisy data, and in
-        <strong>stochastic geometry</strong>, which studies random geometric structures
-        such as random point processes, tessellations, and their limiting behaviour. My
-        coursework at AIMS Rwanda included a dedicated TDA course as well as substantial
-        training in probability and stochastic processes, and I am keen to explore
-        probabilistic approaches to TDA as a bridge between my topological background and
-        applied/data-driven questions.
+        <strong>In progress</strong>
       </p>
+      <p class="updated">[last updated in October 2026]</p>
     </div>
   </div>
 
